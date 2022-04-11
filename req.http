@@ -1,0 +1,73 @@
+GET http://localhost:8081 HTTP/1.1
+
+###
+
+POST http://localhost:8081/signUp HTTP/1.1
+Content-Type: application/json
+
+{
+  "countryCode": "PER",
+  "documentType": "DNI",
+  "documentNumber": "000000001",
+  "email": "pmalave2@hotmail.com",
+  "phoneNumber": "+51950400917",
+  "password": "Auna2234"
+}
+
+###
+
+POST http://localhost:8081/confirmSignUp HTTP/1.1
+content-type: application/json
+
+{
+  "countryCode": "PER",
+  "documentType": "DNI",
+  "documentNumber": "000000001",
+  "confirmationCode": "321588"
+}
+
+###
+
+POST http://localhost:8081/resendOTP HTTP/1.1
+content-type: application/json
+
+{
+  "countryCode": "PER",
+  "documentType": "DNI",
+  "documentNumber": "000000001"
+}
+
+###
+
+POST http://localhost:8081/logIn HTTP/1.1
+content-type: application/json
+
+{
+  "countryCode": "PER",
+  "documentType": "DNI",
+  "documentNumber": "000000001",
+  "password": "Auna2234"
+}
+
+###
+
+POST http://localhost:8081/verifyPhone HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJraWQiOiJOdURsbDJNZDNhOGtPbjVyTThcL2lKQm1RVVpad3BmUDBVQm9DZFFlNXhJaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4NjhmZWVkNS1lOGVlLTQ2ZmUtODljZC1lODRlYTA0MzBmZWUiLCJkZXZpY2Vfa2V5IjoidXMtZWFzdC0xXzYzZjVjNDliLTk0ZWYtNDdmNS1iMjA5LTcxNjVjOWI0MTE2ZiIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2ZzMDhUQnBZcSIsImNsaWVudF9pZCI6IjcxaWpkcmsyMmlybWUyY3ZiYm9qcm04MGhxIiwib3JpZ2luX2p0aSI6IjMzODFhOGEyLWVlMzYtNGU1MS1hOGY0LTcwYWMyOGYxOGNhZCIsImV2ZW50X2lkIjoiYjYwN2M2YzItNmI1NS00YzAyLTg5NWQtMDM5MjMwODhiMmViIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY0OTQ1NTk5MCwiZXhwIjoxNjQ5NDU5NTkwLCJpYXQiOjE2NDk0NTU5OTAsImp0aSI6IjlmYjI5ZDI1LTE2MDAtNDkzYi05YWMzLWQ2MzZkNzM0YTU1MyIsInVzZXJuYW1lIjoicGVyZG5pMDAwMDAwMDAxIn0.dLYzYsei01eh4qbaLg7lVPNc-ibc9J37EaIKGK3_UNejjtZP1wr2X4ipwCd8T_zxWpwF8SoieiC2IALfDak76CvEg33pAV2OUpk3oJ1jvpxYHoYAvjJ4kYGINuHJvQEDtn9CYdPIh3xTr7Ke0g2_ci0lSotW3iTQ3ZhbjtL_qpmqr861zMhDZvEg6vG7ULSsV0Uj48BLmQQ8HIc7e0OYVbcVjIkKIabRqWbZpuAfej27PKsRkawhSaGLWgj8mxC0YeTRy6OKmww59yCC9D5cUlAcUpYem-iG954vKDgWa3sie8tAPJE7cUKF9Fpj4SQ13rh5pRG53-BVg1x2xyVJ_w
+
+###
+
+POST http://localhost:8081/verifyPhoneOTP HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJraWQiOiJOdURsbDJNZDNhOGtPbjVyTThcL2lKQm1RVVpad3BmUDBVQm9DZFFlNXhJaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4NjhmZWVkNS1lOGVlLTQ2ZmUtODljZC1lODRlYTA0MzBmZWUiLCJkZXZpY2Vfa2V5IjoidXMtZWFzdC0xXzYzZjVjNDliLTk0ZWYtNDdmNS1iMjA5LTcxNjVjOWI0MTE2ZiIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2ZzMDhUQnBZcSIsImNsaWVudF9pZCI6IjcxaWpkcmsyMmlybWUyY3ZiYm9qcm04MGhxIiwib3JpZ2luX2p0aSI6IjMzODFhOGEyLWVlMzYtNGU1MS1hOGY0LTcwYWMyOGYxOGNhZCIsImV2ZW50X2lkIjoiYjYwN2M2YzItNmI1NS00YzAyLTg5NWQtMDM5MjMwODhiMmViIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY0OTQ1NTk5MCwiZXhwIjoxNjQ5NDU5NTkwLCJpYXQiOjE2NDk0NTU5OTAsImp0aSI6IjlmYjI5ZDI1LTE2MDAtNDkzYi05YWMzLWQ2MzZkNzM0YTU1MyIsInVzZXJuYW1lIjoicGVyZG5pMDAwMDAwMDAxIn0.dLYzYsei01eh4qbaLg7lVPNc-ibc9J37EaIKGK3_UNejjtZP1wr2X4ipwCd8T_zxWpwF8SoieiC2IALfDak76CvEg33pAV2OUpk3oJ1jvpxYHoYAvjJ4kYGINuHJvQEDtn9CYdPIh3xTr7Ke0g2_ci0lSotW3iTQ3ZhbjtL_qpmqr861zMhDZvEg6vG7ULSsV0Uj48BLmQQ8HIc7e0OYVbcVjIkKIabRqWbZpuAfej27PKsRkawhSaGLWgj8mxC0YeTRy6OKmww59yCC9D5cUlAcUpYem-iG954vKDgWa3sie8tAPJE7cUKF9Fpj4SQ13rh5pRG53-BVg1x2xyVJ_w
+
+{
+  "code": "479534"
+}
+
+###
+
+POST http://localhost:8081/signOut HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJraWQiOiJOdURsbDJNZDNhOGtPbjVyTThcL2lKQm1RVVpad3BmUDBVQm9DZFFlNXhJaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4NjhmZWVkNS1lOGVlLTQ2ZmUtODljZC1lODRlYTA0MzBmZWUiLCJkZXZpY2Vfa2V5IjoidXMtZWFzdC0xX2M4OTM3MTZjLThlZWQtNDcyYi05ZTRmLTRjOWZkZmUwYTI0NCIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2ZzMDhUQnBZcSIsImNsaWVudF9pZCI6IjcxaWpkcmsyMmlybWUyY3ZiYm9qcm04MGhxIiwib3JpZ2luX2p0aSI6ImU4ZDA2MDYzLTczNjUtNDgxZS1iNzI2LWFjZTRmYmE4NzYxYyIsImV2ZW50X2lkIjoiYTVhODcyZTctY2FjMi00ZWM5LWFhZTAtNjkyOWI5MDg4MTIyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY0OTQ1ODE0OSwiZXhwIjoxNjQ5NDYxNzQ5LCJpYXQiOjE2NDk0NTgxNDksImp0aSI6ImNjMDNkYzQzLTNmYjgtNGFkMS1iNzEzLTIyZjA3NDU3NGFhNyIsInVzZXJuYW1lIjoicGVyZG5pMDAwMDAwMDAxIn0.TiuK7_0ul66A0j8kLvOCmiR3hNvuY-Nx5VwDSp2-Ni97egae-kFXQ_a2l4ybzyfhc5LFVimYj0VZ2nsLsyUs5ezGAtuUgeudB3xNumRn9-WIQcAkcz9S2QhRx3vaMwJZaFIPi6tQsQ0rWf_SgivbBkHIM9WZp4JK7pvz9H6365nO6xiOTm9SRWZSq59R045BPwKihWU0_SfI-oU0AqLmVt_LFh-UigbnvoySitJzlUQ9ZvId1s4bx75SS-Mb13VlM1TpKmEROpvkVC1RsjSA-zoSZuE6TKYjJW2_8Zu0GwCt8SHWqB0wX8-BGxgws_SoklY2NPpV2wnSV74QZxipDQ
+x-device-id: us-east-1_c893716c-8eed-472b-9e4f-4c9fdfe0a244
